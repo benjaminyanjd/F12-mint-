@@ -1,0 +1,24 @@
+async function run() {
+  const mintBtn = document.querySelector("#app > div > div > div > section > div.container > div > div > div > div > div > div > div > form > div > div.v-col-md-3.v-col-24 > button");
+
+  while (true) {
+    console.log('点击mint10');
+    try {
+      mintBtn.click();
+      await sleep(1000);
+    } catch (e) {
+    } finally {
+      await sleep(3000);
+    }
+  }
+}
+
+const sleep = async (time) => {
+  return await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('');
+    }, time);
+  });
+};
+
+run();
